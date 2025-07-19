@@ -1,0 +1,286 @@
+body {
+    background: linear-gradient(135deg, #0b2e13 60%, #1b5e20 100%);
+    margin: 0;
+    font-family: 'Segoe UI', 'Arial', 'Comic Sans MS', cursive, sans-serif;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Christmas logo */
+.christmas-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+.christmas-logo img {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+    border-radius: 50%;
+    box-shadow: 0 2px 12px #0003;
+    background: #fff;
+    border: 2px solid #ffe066;
+}
+
+/* Snow effect */
+.snow {
+    pointer-events: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: 10;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="2" fill="white" opacity="0.7"/><circle cx="60" cy="30" r="1.5" fill="white" opacity="0.5"/><circle cx="80" cy="80" r="2.5" fill="white" opacity="0.6"/><circle cx="30" cy="70" r="1.2" fill="white" opacity="0.4"/></svg>');
+    animation: snow-fall 12s linear infinite;
+    opacity: 0.7;
+}
+@keyframes snow-fall {
+    0% { background-position: 0 0, 0 0; }
+    100% { background-position: 0 100vh, 0 100vh; }
+}
+
+/* Tree menu container and tree layers */
+.tree-menu-container {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+/* Tree layers for a more professional look */
+.tree-menu {
+    background: none;
+    width: 90vw;
+    max-width: 370px;
+    margin: 0 auto;
+    padding: 0 0 16px 0;
+    border-radius: 32px;
+    box-shadow: none;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+}
+
+.tree-layer {
+    width: 80%;
+    max-width: 320px;
+    height: 28px;
+    background: linear-gradient(135deg, #388e3c 80%, #4caf50 100%);
+    border-radius: 60px 60px 60px 60px / 60px 60px 28px 28px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    border: 3px solid #fff;
+    margin-bottom: -10px;
+    box-shadow: 0 2px 8px #0002;
+}
+.tree-layer.layer2 {
+    width: 65%;
+    max-width: 260px;
+    height: 24px;
+    margin-bottom: -8px;
+}
+.tree-layer.layer3 {
+    width: 50%;
+    max-width: 180px;
+    height: 20px;
+    margin-bottom: -6px;
+}
+.tree-layer.layer4 {
+    width: 35%;
+    max-width: 110px;
+    height: 16px;
+    margin-bottom: 0;
+}
+
+/* Tree star */
+.tree-star {
+    width: 28px; height: 28px;
+    background: #ffe066;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    margin: 0 auto 0 auto;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 12px 2px #ffe06688;
+    top: 8px;
+}
+
+/* Tree trunk */
+.tree-trunk {
+    width: 22px;
+    height: 22px;
+    background: #8d5524;
+    border-radius: 0 0 8px 8px;
+    margin: 10px auto 0 auto;
+    box-shadow: 0 2px 8px #0002;
+}
+
+/* Greeting and subtitle */
+.tree-greeting {
+    color: #ffe066;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 4px;
+    margin-top: 2px;
+    letter-spacing: 1px;
+    text-shadow: 1px 2px 6px #0006;
+}
+.tree-title {
+    font-family: 'Pacifico', 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
+    color: #fff;
+    font-size: 2.1em;
+    font-weight: bold;
+    margin: 0 0 6px 0;
+    line-height: 1.1em;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 6px #0006;
+}
+.tree-subtitle {
+    color: #fff;
+    font-size: 1em;
+    margin-bottom: 8px;
+    font-style: italic;
+    text-shadow: 1px 2px 6px #0006;
+}
+.tree-divider {
+    border: none;
+    border-top: 2px dashed #fff;
+    margin: 10px auto 18px auto;
+    width: 60%;
+}
+.tree-section {
+    color: #ffe066;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 18px 0 8px 0;
+    letter-spacing: 1px;
+    text-shadow: 1px 2px 6px #0006;
+}
+.tree-items {
+    color: #fff;
+    font-size: 1em;
+    margin-bottom: 10px;
+    line-height: 1.5em;
+    text-shadow: 1px 2px 6px #0006;
+}
+.tree-message {
+    color: #ffe066;
+    font-size: 1em;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-style: italic;
+    text-shadow: 1px 2px 6px #0006;
+}
+
+/* Ornaments */
+.ornament {
+    position: absolute;
+    border-radius: 50%;
+    background: #fff;
+}
+.ornament1 { top: 18%; left: 10%; width: 40px; height: 40px; background: #f7c948; }
+.ornament2 { top: 30%; right: 12%; width: 36px; height: 36px; background: #e94f37; }
+.ornament3 { bottom: 18%; left: 18%; width: 32px; height: 32px; background: #43b0f1; }
+
+/* Gifts */
+.gift {
+    position: absolute;
+    width: 40px; height: 40px;
+    background: #e94f37;
+    border-radius: 8px;
+}
+.gift1 { bottom: 10%; left: 8%; background: #f7c948; }
+.gift2 { bottom: 12%; right: 14%; background: #43b0f1; }
+
+/* Stars */
+.star {
+    position: absolute;
+    width: 24px; height: 24px;
+    background: #ffe066;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.star1 { top: 10%; left: 50%; transform: translateX(-50%);}
+.star2 { top: 40%; right: 20%; }
+.star3 { bottom: 20%; left: 30%; }
+
+/* Bell and holly */
+.tree-bell {
+    position: absolute;
+    top: -38px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bell {
+    display: inline-block;
+    width: 54px; height: 38px;
+    background: #ffe066;
+    border-radius: 0 0 32px 32px / 0 0 38px 38px;
+    border-bottom: 4px solid #e94f37;
+    position: relative;
+}
+.bell:after {
+    content: '';
+    position: absolute;
+    left: 18px; bottom: -8px;
+    width: 18px; height: 18px;
+    background: #f7c948;
+    border-radius: 50%;
+    border: 2px solid #e94f37;
+}
+.holly {
+    display: inline-block;
+    width: 54px; height: 18px;
+    background: none;
+    position: absolute;
+    top: -16px; left: 0;
+}
+.holly:before, .holly:after {
+    content: '';
+    position: absolute;
+    width: 18px; height: 18px;
+    background: #43b0f1;
+    border-radius: 50%;
+    top: 0;
+}
+.holly:before { left: 0; background: #388e3c; }
+.holly:after { right: 0; background: #388e3c; }
+.holly {
+    /* Red berry */
+}
+.holly:after {
+    left: 18px;
+    top: 2px;
+    width: 14px; height: 14px;
+    background: #e94f37;
+    border-radius: 50%;
+    box-shadow: 10px 0 #e94f37, -10px 0 #e94f37;
+}
+
+@media (max-width: 600px) {
+    .tree-menu {
+        max-width: 98vw;
+    }
+    .tree-title { font-size: 1.3em; }
+    .tree-section { font-size: 1em; }
+    .tree-items { font-size: 0.95em; }
+    .tree-star { width: 28px; height: 28px; }
+    .tree-bell { top: -28px; }
+    .tree-layer { height: 38px; }
+    .tree-layer.layer2 { height: 32px; }
+    .tree-layer.layer3 { height: 28px; }
+    .tree-layer.layer4 { height: 18px; }
+    .tree-trunk { width: 22px; height: 22px; }
+    .christmas-logo img { width: 54px; height: 54px; }
+}
