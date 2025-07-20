@@ -1,16 +1,121 @@
-body {
+body, html {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+.menu-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.menu-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.menu-overlay {        
+  z-index: 1;
+ position: absolute;
+  top: 15%;           /* space from top */
+  bottom: 10%;         /* space from bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: scroll; /* Enables vertical scroll */
+  max-height: 80vh;
+
+  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;
+}
+
+.menu-overlay::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.menu-block {
+  overflow-y: auto;
+  width: 80%;
+  height: 100%;
+  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;
+}
+
+.menu-block::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.menu-block h2 {
   text-align: center;
+  margin-top: 0;
+  font-size: 24px;
 }
 
-.container {
-  margin-top: 100px;
+.menu-block ul {
+  list-style: none;
+  padding: 0;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
+.menu-block li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 10px 15px;
   cursor: pointer;
+  z-index: 2;
 }
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
+.swipe-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;        /* reduced from 2rem */
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 5px 8px;         /* reduced padding */
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;       /* optional: round buttons */
+}
+
+
+
+
