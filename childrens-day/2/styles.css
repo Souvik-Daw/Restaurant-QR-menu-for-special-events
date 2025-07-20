@@ -1,0 +1,77 @@
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #fff8f0;
+  padding: 20px;
+  margin: 0;
+}
+
+.menu-wrapper {
+  max-width: 700px;
+  background: #fffdf9;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.kids {
+  font-family: 'Pacifico', cursive;
+  color: #333;
+}
+
+.menu {
+  font-family: 'Comic Sans MS', cursive;
+  color: #f4c200;
+  letter-spacing: 4px;
+  font-weight: bold;
+  background: linear-gradient(to right, #f4c200, #40c3ff, #ff7ecb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section h2 {
+  color: #2a9d8f;
+  margin-top: 30px;
+  font-size: 1.5rem;
+  border-bottom: 2px dotted #ccc;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+li span {
+  font-weight: bold;
+}
+
+.image-center {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.image-center img {
+  width: 60px;
+  margin: 0 8px;
+}
